@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(45deg, #ffe6e6, #ffb3b3);
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+    .heart {
+      color: red;
+      font-size: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .heart:hover {
+      transform: scale(1.2);
+    }
+    .message {
+      margin: 20px;
+      font-size: 24px;
+      color: #444;
+    }
+    .hidden {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .visible {
+      display: block;
+      opacity: 1;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart" onclick="showMessage()" id="heart">♥</div>
+    <div class="message">Click the heart!</div>
+    <div id="special-message" class="hidden">
+      <h2>Hey Beauty!</h2>
+      <p>Every time I think of you, my heart skips a beat ❤️</p>
+      <button onclick="showMore()">Want to know a secret?</button>
+    </div>
+    <div id="more-content" class="hidden">
+      <p>You're the most amazing person I've ever met</p>
+      <p>You make every day brighter just by being you</p>
+      <button onclick="showFinal()">One more thing...</button>
+    </div>
+    <div id="final-message" class="hidden">
+      <h2>You're my favorite person in the whole world! 💕</h2>
+      <button onclick="showLast()">One more thing... suerrr</button>
+    </div>
+    <div id="final-pesan" class="hidden">
+      <h2>I love u sufiiii 💕</h3>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('special-message').classList.add('visible');
+      document.getElementById('heart').style.animation = 'pulse 1s infinite';
+    }
+
+    function showMore() {
+      document.getElementById('more-content').classList.add('visible');
+    }
+
+    function showFinal() {
+      document.getElementById('final-message').classList.add('visible');
+    }
+    function showLast() {
+      document.getElementById('final-pesan').classList.add('visible');
+    }
+  </script>
+</body>
+</html>
